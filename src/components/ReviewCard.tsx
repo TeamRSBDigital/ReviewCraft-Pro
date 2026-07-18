@@ -63,6 +63,7 @@ export const ReviewCard: React.FC<ReviewCardProps> = ({
       QRCode.toDataURL(reviewData.qrCodeUrl, {
         margin: 1,
         width: 180,
+        errorCorrectionLevel: designConfig.qrErrorCorrectionLevel || 'M',
         color: {
           dark: qrColorDark,
           light: qrColorLight,
@@ -82,6 +83,7 @@ export const ReviewCard: React.FC<ReviewCardProps> = ({
     designConfig.qrCustomColor,
     designConfig.primaryColor,
     designConfig.accentColor,
+    designConfig.qrErrorCorrectionLevel,
   ]);
 
   // Card background styling based on user selections
@@ -554,11 +556,19 @@ export const ReviewCard: React.FC<ReviewCardProps> = ({
             {/* Offline-generated QR Code for validation */}
             {reviewData.useQrCode && qrCodeDataUrl && (
               <div className="flex items-center gap-3 bg-white/5 dark:bg-black/15 p-2 rounded-xl backdrop-blur-sm border border-white/10">
-                <img
-                  src={qrCodeDataUrl}
-                  alt="Review Verification QR"
-                  className="w-16 h-16 object-contain"
-                />
+                <div
+                  className="flex items-center justify-center bg-white/10 dark:bg-black/25"
+                  style={{
+                    padding: designConfig.qrShowPadding ? `${designConfig.qrPadding ?? 8}px` : '0px',
+                    borderRadius: designConfig.qrShowBorderRadius ? `${designConfig.qrBorderRadius ?? 12}px` : '0px',
+                  }}
+                >
+                  <img
+                    src={qrCodeDataUrl}
+                    alt="Review Verification QR"
+                    className="w-16 h-16 object-contain"
+                  />
+                </div>
                 <div className={`${isRtl ? 'text-left' : 'text-right'} flex flex-col justify-center`}>
                   <span className={`text-[10px] font-mono leading-tight tracking-wider uppercase block ${themeTextColor()}`}>
                     Scan to

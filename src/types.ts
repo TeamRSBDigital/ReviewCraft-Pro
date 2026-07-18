@@ -104,6 +104,11 @@ export interface DesignConfig {
   filterBlur?: number; // 0 to 20 (px)
   qrColorMode?: 'default' | 'primary' | 'accent' | 'custom';
   qrCustomColor?: string;
+  qrErrorCorrectionLevel?: 'L' | 'M' | 'Q' | 'H';
+  qrShowBorderRadius?: boolean;
+  qrBorderRadius?: number; // border radius in px
+  qrShowPadding?: boolean;
+  qrPadding?: number; // padding in px
 }
 
 export interface SavedTemplate {

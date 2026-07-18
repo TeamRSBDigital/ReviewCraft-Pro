@@ -68,6 +68,11 @@ const INITIAL_CONFIG: DesignConfig = {
   filterBlur: 0,
   qrColorMode: 'default',
   qrCustomColor: '#14A800',
+  qrErrorCorrectionLevel: 'M',
+  qrShowBorderRadius: true,
+  qrBorderRadius: 12,
+  qrShowPadding: true,
+  qrPadding: 8,
 };
 
 interface ToastState {

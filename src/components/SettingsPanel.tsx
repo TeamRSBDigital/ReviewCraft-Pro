@@ -945,6 +945,149 @@ export const SettingsPanel: React.FC<SettingsPanelProps> = ({
                           </div>
                         </div>
                       )}
+
+                      {/* QR Advanced Styling & Configuration Sub-Section */}
+                      <div className="pt-3.5 border-t border-slate-100 dark:border-slate-800/60 space-y-3.5 animate-fadeIn">
+                        <div className="flex items-center justify-between">
+                          <h4 className="text-[10px] font-extrabold uppercase tracking-widest text-slate-400">
+                            QR Code Styling & Correction
+                          </h4>
+                        </div>
+
+                        {/* Error Correction Level */}
+                        <div>
+                          <label className="block text-[10px] font-extrabold uppercase tracking-widest text-slate-400 mb-1.5">
+                            Error Correction Level
+                          </label>
+                          <div className="grid grid-cols-4 gap-1.5">
+                            {([
+                              { id: 'L', label: 'Low (7%)', desc: 'Saves space' },
+                              { id: 'M', label: 'Med (15%)', desc: 'Standard' },
+                              { id: 'Q', label: 'Quart (25%)', desc: 'Resilient' },
+                              { id: 'H', label: 'High (30%)', desc: 'Maximum' }
+                            ] as const).map((level) => (
+                              <button
+                                key={level.id}
+                                type="button"
+                                title={level.desc}
+                                onClick={() =>
+                                  setDesignConfig((prev) => ({
+                                    ...prev,
+                                    qrErrorCorrectionLevel: level.id,
+                                  }))
+                                }
+                                className={`px-1 py-1.5 text-[10px] font-extrabold uppercase rounded-md border text-center transition-all cursor-pointer ${
+                                  (designConfig.qrErrorCorrectionLevel || 'M') === level.id
+                                    ? 'border-emerald-500 text-emerald-600 dark:text-emerald-400 bg-emerald-50/20 dark:bg-emerald-950/20'
+                                    : 'border-slate-200 dark:border-slate-800 text-slate-500 hover:border-slate-300 dark:text-slate-400 bg-white dark:bg-slate-900'
+                                }`}
+                              >
+                                {level.id}
+                              </button>
+                            ))}
+                          </div>
+                        </div>
+
+                        {/* Border Radius Toggle & Slider */}
+                        <div className="space-y-2 bg-slate-50 dark:bg-slate-950/20 p-2.5 rounded-lg border border-slate-100 dark:border-slate-800/40">
+                          <div className="flex items-center justify-between">
+                            <div>
+                              <span className="text-[11px] font-bold text-slate-700 dark:text-slate-300">
+                                Rounded Corners
+                              </span>
+                              <span className="text-[9px] text-slate-400 block">
+                                Round the edges of the QR backdrop
+                              </span>
+                            </div>
+                            <label className="relative inline-flex items-center cursor-pointer">
+                              <input
+                                type="checkbox"
+                                checked={designConfig.qrShowBorderRadius !== false}
+                                onChange={(e) =>
+                                  setDesignConfig((prev) => ({
+                                    ...prev,
+                                    qrShowBorderRadius: e.target.checked,
+                                  }))
+                                }
+                                className="sr-only peer"
+                              />
+                              <div className="w-8 h-4 bg-slate-200 peer-focus:outline-none rounded-full peer dark:bg-slate-800 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-3 after:width-3 after:transition-all dark:border-slate-600 peer-checked:bg-emerald-500"></div>
+                            </label>
+                          </div>
+
+                          {(designConfig.qrShowBorderRadius !== false) && (
+                            <div className="pt-1.5 animate-fadeIn">
+                              <div className="flex items-center justify-between text-[10px] font-bold text-slate-500 mb-1">
+                                <span>Corner Radius</span>
+                                <span className="font-mono">{designConfig.qrBorderRadius ?? 12}px</span>
+                              </div>
+                              <input
+                                type="range"
+                                min="0"
+                                max="24"
+                                value={designConfig.qrBorderRadius ?? 12}
+                                onChange={(e) =>
+                                  setDesignConfig((prev) => ({
+                                    ...prev,
+                                    qrBorderRadius: parseInt(e.target.value),
+                                  }))
+                                }
+                                className="w-full accent-emerald-500 h-1 bg-slate-200 dark:bg-slate-800 rounded-lg appearance-none cursor-pointer"
+                              />
+                            </div>
+                          )}
+                        </div>
+
+                        {/* Padding Toggle & Slider */}
+                        <div className="space-y-2 bg-slate-50 dark:bg-slate-950/20 p-2.5 rounded-lg border border-slate-100 dark:border-slate-800/40">
+                          <div className="flex items-center justify-between">
+                            <div>
+                              <span className="text-[11px] font-bold text-slate-700 dark:text-slate-300">
+                                Inner Padding
+                              </span>
+                              <span className="text-[9px] text-slate-400 block">
+                                Adjust spacing around the QR code
+                              </span>
+                            </div>
+                            <label className="relative inline-flex items-center cursor-pointer">
+                              <input
+                                type="checkbox"
+                                checked={designConfig.qrShowPadding !== false}
+                                onChange={(e) =>
+                                  setDesignConfig((prev) => ({
+                                    ...prev,
+                                    qrShowPadding: e.target.checked,
+                                  }))
+                                }
+                                className="sr-only peer"
+                              />
+                              <div className="w-8 h-4 bg-slate-200 peer-focus:outline-none rounded-full peer dark:bg-slate-800 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-3 after:width-3 after:transition-all dark:border-slate-600 peer-checked:bg-emerald-500"></div>
+                            </label>
+                          </div>
+
+                          {(designConfig.qrShowPadding !== false) && (
+                            <div className="pt-1.5 animate-fadeIn">
+                              <div className="flex items-center justify-between text-[10px] font-bold text-slate-500 mb-1">
+                                <span>Padding Space</span>
+                                <span className="font-mono">{designConfig.qrPadding ?? 8}px</span>
+                              </div>
+                              <input
+                                type="range"
+                                min="0"
+                                max="24"
+                                value={designConfig.qrPadding ?? 8}
+                                onChange={(e) =>
+                                  setDesignConfig((prev) => ({
+                                    ...prev,
+                                    qrPadding: parseInt(e.target.value),
+                                  }))
+                                }
+                                className="w-full accent-emerald-500 h-1 bg-slate-200 dark:bg-slate-800 rounded-lg appearance-none cursor-pointer"
+                              />
+                            </div>
+                          )}
+                        </div>
+                      </div>
                     </div>
                   )}
                 </div>
