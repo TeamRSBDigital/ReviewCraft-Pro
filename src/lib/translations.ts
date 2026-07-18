@@ -109,7 +109,7 @@ export const TRANSLATIONS: Record<LanguageCode, Record<string, string>> = {
     btn_prefill_lang_text: 'Load Selected Language Demo Text',
 
     // CSS Filters
-    header_filters: 'CSS Filters & Tone Adjustments',
+    header_filters: 'Image Processing (CSS Filters)',
     label_filter_grayscale: 'Grayscale (Black & White)',
     label_filter_sepia: 'Sepia Vintage Warmth',
     label_filter_brightness: 'Contrast Brightness Level',
@@ -200,7 +200,7 @@ export const TRANSLATIONS: Record<LanguageCode, Record<string, string>> = {
     btn_prefill_lang_text: 'Cargar Texto de Demostración',
 
     // CSS Filters
-    header_filters: 'Filtros CSS y Ajustes de Tono',
+    header_filters: 'Procesamiento de Imagen (Filtros)',
     label_filter_grayscale: 'Escala de grises (B y N)',
     label_filter_sepia: 'Calidez sepia vintage',
     label_filter_brightness: 'Nivel de brillo',
@@ -291,7 +291,7 @@ export const TRANSLATIONS: Record<LanguageCode, Record<string, string>> = {
     btn_prefill_lang_text: 'تحميل نص تجريبي عربي',
 
     // CSS Filters
-    header_filters: 'فلاتر وتعديلات ألوان CSS',
+    header_filters: 'معالجة الصور (فلاتر CSS)',
     label_filter_grayscale: 'تدرج الرمادي (أبيض وأسود)',
     label_filter_sepia: 'تأثير سيبيا كلاسيكي دافئ',
     label_filter_brightness: 'مستوى سطوع الصورة',
@@ -382,7 +382,7 @@ export const TRANSLATIONS: Record<LanguageCode, Record<string, string>> = {
     btn_prefill_lang_text: 'বাংলা ডেমো টেক্সট লোড করুন',
 
     // CSS Filters
-    header_filters: 'সিএসএস ফিল্টার ও রঙ সমন্বয়',
+    header_filters: 'ইমেজ প্রসেসিং (ফিল্টার)',
     label_filter_grayscale: 'গ্রে-স্কেল (কালো ও সাদা)',
     label_filter_sepia: 'সেপিয়া ভিন্টেজ আবহ',
     label_filter_brightness: 'উজ্জ্বলতা লেভেল (Brightness)',
@@ -473,7 +473,7 @@ export const TRANSLATIONS: Record<LanguageCode, Record<string, string>> = {
     btn_prefill_lang_text: 'Charger un Texte de Démo',
 
     // CSS Filters
-    header_filters: 'Filtres CSS & Ajustements',
+    header_filters: 'Traitement d\'Image (Filtres)',
     label_filter_grayscale: 'Échelle de gris (Noir & Blanc)',
     label_filter_sepia: 'Chaleur vintage sépia',
     label_filter_brightness: 'Niveau de luminosité',

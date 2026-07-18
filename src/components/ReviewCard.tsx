@@ -40,12 +40,24 @@ export const ReviewCard: React.FC<ReviewCardProps> = ({
   // Dynamic Offline QR Code Generation
   useEffect(() => {
     if (reviewData.useQrCode && reviewData.qrCodeUrl) {
-      const isDarkTheme =
-        designConfig.theme === 'dark' ||
-        designConfig.theme === 'luxury' ||
-        designConfig.theme === 'corporate' && designConfig.textColor !== '#0f172a';
+      let qrColorDark = '#0f172a';
+      const mode = designConfig.qrColorMode || 'default';
+
+      if (mode === 'primary') {
+        qrColorDark = designConfig.primaryColor || '#14A800';
+      } else if (mode === 'accent') {
+        qrColorDark = designConfig.accentColor || '#16A34A';
+      } else if (mode === 'custom') {
+        qrColorDark = designConfig.qrCustomColor || '#14A800';
+      } else {
+        const isDarkTheme =
+          designConfig.theme === 'dark' ||
+          designConfig.theme === 'luxury' ||
+          (designConfig.theme === 'corporate' && designConfig.textColor !== '#0f172a');
+        
+        qrColorDark = isDarkTheme ? '#ffffff' : '#0f172a';
+      }
       
-      const qrColorDark = isDarkTheme ? '#ffffff' : '#0f172a';
       const qrColorLight = '#00000000'; // transparent
 
       QRCode.toDataURL(reviewData.qrCodeUrl, {
@@ -66,6 +78,10 @@ export const ReviewCard: React.FC<ReviewCardProps> = ({
     reviewData.qrCodeUrl,
     designConfig.theme,
     designConfig.textColor,
+    designConfig.qrColorMode,
+    designConfig.qrCustomColor,
+    designConfig.primaryColor,
+    designConfig.accentColor,
   ]);
 
   // Card background styling based on user selections

@@ -102,6 +102,8 @@ export interface DesignConfig {
   filterBrightness?: number; // 50 to 150 (percentage)
   filterContrast?: number; // 50 to 150 (percentage)
   filterBlur?: number; // 0 to 20 (px)
+  qrColorMode?: 'default' | 'primary' | 'accent' | 'custom';
+  qrCustomColor?: string;
 }
 
 export interface SavedTemplate {

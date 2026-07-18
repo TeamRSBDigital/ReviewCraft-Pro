@@ -66,6 +66,8 @@ const INITIAL_CONFIG: DesignConfig = {
   filterBrightness: 100,
   filterContrast: 100,
   filterBlur: 0,
+  qrColorMode: 'default',
+  qrCustomColor: '#14A800',
 };
 
 interface ToastState {

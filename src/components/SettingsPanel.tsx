@@ -870,15 +870,82 @@ export const SettingsPanel: React.FC<SettingsPanelProps> = ({
                   </div>
 
                   {reviewData.useQrCode && (
-                    <input
-                      type="url"
-                      value={reviewData.qrCodeUrl}
-                      onChange={(e) =>
-                        setReviewData((prev) => ({ ...prev, qrCodeUrl: e.target.value }))
-                      }
-                      placeholder="https://upwork.com/contracts/12345678"
-                      className="w-full px-3 py-1.5 text-xs border border-slate-200 dark:border-slate-800 rounded-lg bg-white dark:bg-slate-900 focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 text-slate-800 dark:text-slate-200"
-                    />
+                    <div className="mt-3 space-y-3">
+                      <div>
+                        <label className="block text-[10px] font-extrabold uppercase tracking-widest text-slate-400 mb-1">
+                          Verification Website / URL
+                        </label>
+                        <input
+                          type="url"
+                          value={reviewData.qrCodeUrl}
+                          onChange={(e) =>
+                            setReviewData((prev) => ({ ...prev, qrCodeUrl: e.target.value }))
+                          }
+                          placeholder="https://upwork.com/contracts/12345678"
+                          className="w-full px-3 py-1.5 text-xs border border-slate-200 dark:border-slate-800 rounded-lg bg-white dark:bg-slate-900 focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 text-slate-800 dark:text-slate-200 font-medium"
+                        />
+                      </div>
+                      
+                      {/* QR Color Selector */}
+                      <div>
+                        <label className="block text-[10px] font-extrabold uppercase tracking-widest text-slate-400 mb-1.5">
+                          QR Code Color Mode
+                        </label>
+                        <div className="grid grid-cols-4 gap-1.5">
+                          {([
+                            { id: 'default', label: 'Default' },
+                            { id: 'primary', label: 'Primary' },
+                            { id: 'accent', label: 'Accent' },
+                            { id: 'custom', label: 'Custom' }
+                          ] as const).map((mode) => (
+                            <button
+                              key={mode.id}
+                              type="button"
+                              onClick={() =>
+                                setDesignConfig((prev) => ({
+                                  ...prev,
+                                  qrColorMode: mode.id,
+                                }))
+                              }
+                              className={`px-1 py-1.5 text-[10px] font-extrabold uppercase rounded-md border text-center transition-all cursor-pointer ${
+                                (designConfig.qrColorMode || 'default') === mode.id
+                                  ? 'border-emerald-500 text-emerald-600 dark:text-emerald-400 bg-emerald-50/20 dark:bg-emerald-950/20'
+                                  : 'border-slate-200 dark:border-slate-800 text-slate-500 hover:border-slate-300 dark:text-slate-400 bg-white dark:bg-slate-900'
+                              }`}
+                            >
+                              {mode.label}
+                            </button>
+                          ))}
+                        </div>
+                      </div>
+
+                      {/* Custom QR Color Picker */}
+                      {(designConfig.qrColorMode === 'custom') && (
+                        <div className="animate-fadeIn">
+                          <label className="block text-[10px] font-extrabold uppercase tracking-widest text-slate-400 mb-1">
+                            Custom QR Code Color
+                          </label>
+                          <div className="flex items-center gap-1.5 bg-white dark:bg-slate-900 p-1.5 rounded-lg border border-slate-200 dark:border-slate-800">
+                            <input
+                              type="color"
+                              value={designConfig.qrCustomColor || '#14A800'}
+                              onChange={(e) =>
+                                setDesignConfig((p) => ({ ...p, qrCustomColor: e.target.value }))
+                              }
+                              className="w-7 h-7 rounded cursor-pointer bg-transparent border-0"
+                            />
+                            <input
+                              type="text"
+                              value={designConfig.qrCustomColor || '#14A800'}
+                              onChange={(e) =>
+                                setDesignConfig((p) => ({ ...p, qrCustomColor: e.target.value }))
+                              }
+                              className="w-full font-mono text-xs uppercase bg-transparent border-0 text-slate-700 dark:text-slate-300 focus:outline-none"
+                            />
+                          </div>
+                        </div>
+                      )}
+                    </div>
                   )}
                 </div>
               </div>
