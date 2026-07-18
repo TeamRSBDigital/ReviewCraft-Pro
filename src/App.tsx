@@ -15,6 +15,7 @@ import {
   XCircle,
   Clock,
   ExternalLink,
+  Facebook,
 } from 'lucide-react';
 
 import { ReviewCard } from './components/ReviewCard';
@@ -709,11 +710,33 @@ export default function App() {
           </div>
 
           {/* Quick Help Hints */}
-          <footer className="bg-slate-950/20 rounded-2xl p-4 flex items-center gap-3 border border-slate-900 print:hidden text-slate-400">
-            <Info size={16} className="text-slate-400 shrink-0" />
-            <p className="text-[11px] leading-relaxed">
-              <strong className="text-slate-300">Pro tip:</strong> Every design change auto-saves locally instantly. Switch target dimensions from the advanced tab to create beautiful 1.91:1 ratio banner cards for LinkedIn posts, or 1:1 ratio blocks for standard Instagram feeds!
-            </p>
+          <footer className="bg-slate-950/20 rounded-2xl p-4 flex flex-col gap-3.5 border border-slate-900 print:hidden text-slate-400">
+            <div className="flex items-center gap-3">
+              <Info size={16} className="text-slate-400 shrink-0" />
+              <p className="text-[11px] leading-relaxed">
+                <strong className="text-slate-300">Pro tip:</strong> Every design change auto-saves locally instantly. Switch target dimensions from the advanced tab to create beautiful 1.91:1 ratio banner cards for LinkedIn posts, or 1:1 ratio blocks for standard Instagram feeds!
+              </p>
+            </div>
+            
+            <div className="pt-3 border-t border-slate-900/60 flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px]">
+              <div className="flex items-center gap-1.5">
+                <span>&copy; {new Date().getFullYear()}</span>
+                <span className="font-extrabold text-slate-300">RB INK</span>
+                <span className="text-slate-500">| All Rights Reserved.</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <a
+                  href="https://www.facebook.com/rbinkart"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="flex items-center gap-1.5 text-slate-400 hover:text-[#1877f2] transition-colors font-semibold"
+                >
+                  <Facebook size={14} className="text-[#1877f2]" />
+                  <span>Facebook Page</span>
+                  <ExternalLink size={10} className="text-slate-500" />
+                </a>
+              </div>
+            </div>
           </footer>
         </section>
       </main>
