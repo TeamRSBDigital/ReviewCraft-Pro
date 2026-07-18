@@ -260,67 +260,39 @@ export const SettingsPanel: React.FC<SettingsPanelProps> = ({
   return (
     <div id="settings-panel" className="bg-slate-950/40 backdrop-blur-md border border-slate-900 rounded-2xl shadow-2xl flex flex-col overflow-hidden h-full">
       {/* Settings Navigation Header */}
-      <div className="flex border-b border-slate-900 bg-slate-950 overflow-x-auto">
-        <button
-          onClick={() => setActiveTab('content')}
-          className={`flex items-center gap-2 px-5 py-4 text-sm font-semibold border-b-2 transition-all shrink-0 ${
-            activeTab === 'content'
-              ? 'border-emerald-500 text-emerald-400 bg-slate-950/50'
-              : 'border-transparent text-slate-500 hover:text-slate-300'
-          }`}
-          id="tab-content"
-        >
-          <User size={16} />
-          {t('tab_content')}
-        </button>
-        <button
-          onClick={() => setActiveTab('design')}
-          className={`flex items-center gap-2 px-5 py-4 text-sm font-semibold border-b-2 transition-all shrink-0 ${
-            activeTab === 'design'
-              ? 'border-emerald-500 text-emerald-400 bg-slate-950/50'
-              : 'border-transparent text-slate-500 hover:text-slate-300'
-          }`}
-          id="tab-design"
-        >
-          <Palette size={16} />
-          {t('tab_design')}
-        </button>
-        <button
-          onClick={() => setActiveTab('advanced')}
-          className={`flex items-center gap-2 px-5 py-4 text-sm font-semibold border-b-2 transition-all shrink-0 ${
-            activeTab === 'advanced'
-              ? 'border-emerald-500 text-emerald-400 bg-slate-950/50'
-              : 'border-transparent text-slate-500 hover:text-slate-300'
-          }`}
-          id="tab-advanced"
-        >
-          <Sliders size={16} />
-          {t('tab_advanced')}
-        </button>
-        <button
-          onClick={() => setActiveTab('templates')}
-          className={`flex items-center gap-2 px-5 py-4 text-sm font-semibold border-b-2 transition-all shrink-0 ${
-            activeTab === 'templates'
-              ? 'border-emerald-500 text-emerald-400 bg-slate-950/50'
-              : 'border-transparent text-slate-500 hover:text-slate-300'
-          }`}
-          id="tab-templates"
-        >
-          <Layers size={16} />
-          {t('tab_templates')} ({savedTemplates.length})
-        </button>
-        <button
-          onClick={() => setActiveTab('batch')}
-          className={`flex items-center gap-2 px-5 py-4 text-sm font-semibold border-b-2 transition-all shrink-0 ${
-            activeTab === 'batch'
-              ? 'border-emerald-500 text-emerald-400 bg-slate-950/50'
-              : 'border-transparent text-slate-500 hover:text-slate-300'
-          }`}
-          id="tab-batch"
-        >
-          <Database size={16} />
-          {t('tab_batch')}
-        </button>
+      <div className="p-2.5 bg-slate-950 border-b border-slate-900/80 flex items-center overflow-x-auto select-none gap-1.5 scrollbar-thin">
+        {([
+          { id: 'content', label: t('tab_content'), icon: User },
+          { id: 'design', label: t('tab_design'), icon: Palette },
+          { id: 'advanced', label: t('tab_advanced'), icon: Sliders },
+          { 
+            id: 'templates', 
+            label: `${t('tab_templates')} (${savedTemplates.length})`, 
+            icon: Layers 
+          },
+          { id: 'batch', label: t('tab_batch'), icon: Database }
+        ] as const).map((tab) => {
+          const Icon = tab.icon;
+          const isActive = activeTab === tab.id;
+          return (
+            <button
+              key={tab.id}
+              onClick={() => setActiveTab(tab.id)}
+              className={`relative flex items-center gap-2 px-4 py-2.5 text-[11px] font-extrabold uppercase tracking-widest rounded-xl transition-all duration-200 shrink-0 cursor-pointer ${
+                isActive
+                  ? 'text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 shadow-[0_0_15px_-3px_rgba(16,185,129,0.15)]'
+                  : 'text-slate-400 hover:text-slate-200 hover:bg-slate-900/50 border border-transparent'
+              }`}
+              id={`tab-${tab.id}`}
+            >
+              <Icon size={14} className={isActive ? 'text-emerald-400' : 'text-slate-500'} />
+              <span>{tab.label}</span>
+              {isActive && (
+                <span className="absolute -bottom-[11px] left-1/2 -translate-x-1/2 w-8 h-[2px] bg-emerald-500 rounded-full" />
+              )}
+            </button>
+          );
+        })}
       </div>
 
       {/* Language Switcher Bar */}

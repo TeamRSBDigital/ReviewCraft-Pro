@@ -115,7 +115,7 @@ export default function App() {
       setUtcTime(now.toUTCString().replace('GMT', 'UTC'));
     };
     updateTime();
-    const interval = setInterval(updateTime, 60000);
+    const interval = setInterval(updateTime, 1000);
     return () => clearInterval(interval);
   }, []);
 
