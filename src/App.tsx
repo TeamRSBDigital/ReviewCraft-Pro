@@ -20,6 +20,7 @@ import {
 
 import { ReviewCard } from './components/ReviewCard';
 import { SettingsPanel } from './components/SettingsPanel';
+import { WelcomePopup } from './components/WelcomePopup';
 import { demoReviews } from './data/demoReviews';
 import { ReviewData, DesignConfig, SavedTemplate } from './types';
 
@@ -103,6 +104,7 @@ export default function App() {
 
   // Export states and Toast states
   const [isExporting, setIsExporting] = useState<boolean>(false);
+  const [showWelcomePopup, setShowWelcomePopup] = useState<boolean>(false);
   const [toasts, setToasts] = useState<ToastState[]>([]);
 
   // Time stamp state for upper margins
@@ -322,6 +324,9 @@ export default function App() {
       saveAs(dataUrl, fileName);
 
       addToast(`Crystal-clear ${format.toUpperCase()} downloaded successfully!`, 'success');
+      setTimeout(() => {
+        setShowWelcomePopup(true);
+      }, 800);
     } catch (err) {
       console.error(err);
       addToast('Error compressing image asset. Please try again.', 'error');
@@ -740,6 +745,12 @@ export default function App() {
           </footer>
         </section>
       </main>
+
+      {/* Heartfelt Follow Us Welcome Popup */}
+      <WelcomePopup
+        isOpen={showWelcomePopup}
+        onClose={() => setShowWelcomePopup(false)}
+      />
     </div>
   );
 }

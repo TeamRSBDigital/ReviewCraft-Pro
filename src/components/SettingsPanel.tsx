@@ -400,7 +400,7 @@ export const SettingsPanel: React.FC<SettingsPanelProps> = ({
             {/* Client Identity Grid */}
             <div className="grid grid-cols-2 gap-4">
               <div>
-                <label className="block text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-1.5">
+                <label className="block text-[10px] font-black uppercase tracking-widest text-slate-300 dark:text-slate-200 font-sans mb-1.5">
                   {t('label_client_name')}
                 </label>
                 <input
@@ -415,7 +415,7 @@ export const SettingsPanel: React.FC<SettingsPanelProps> = ({
                 />
               </div>
               <div>
-                <label className="block text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-1.5">
+                <label className="block text-[10px] font-black uppercase tracking-widest text-slate-300 dark:text-slate-200 font-sans mb-1.5">
                   {t('label_designation')}
                 </label>
                 <input
@@ -433,7 +433,7 @@ export const SettingsPanel: React.FC<SettingsPanelProps> = ({
 
             <div className="grid grid-cols-2 gap-4">
               <div>
-                <label className="block text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-1.5">
+                <label className="block text-[10px] font-black uppercase tracking-widest text-slate-300 dark:text-slate-200 font-sans mb-1.5">
                   {t('label_company')}
                 </label>
                 <input
@@ -448,7 +448,7 @@ export const SettingsPanel: React.FC<SettingsPanelProps> = ({
                 />
               </div>
               <div>
-                <label className="block text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-1.5">
+                <label className="block text-[10px] font-black uppercase tracking-widest text-slate-300 dark:text-slate-200 font-sans mb-1.5">
                   {t('label_country')}
                 </label>
                 <input
@@ -467,7 +467,7 @@ export const SettingsPanel: React.FC<SettingsPanelProps> = ({
             {/* Platform Dropdown */}
             <div className="grid grid-cols-2 gap-4 bg-slate-50 dark:bg-slate-950/40 p-4 rounded-xl border border-slate-100 dark:border-slate-800/80">
               <div>
-                <label className="block text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-1.5">
+                <label className="block text-[10px] font-black uppercase tracking-widest text-slate-300 dark:text-slate-200 font-sans mb-1.5">
                   {t('label_platform')}
                 </label>
                 <select
@@ -493,7 +493,7 @@ export const SettingsPanel: React.FC<SettingsPanelProps> = ({
               </div>
 
               <div>
-                <label className="block text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-1.5">
+                <label className="block text-[10px] font-black uppercase tracking-widest text-slate-300 dark:text-slate-200 font-sans mb-1.5">
                   {t('label_rating')}
                 </label>
                 <div className="flex items-center gap-2">
@@ -590,7 +590,7 @@ export const SettingsPanel: React.FC<SettingsPanelProps> = ({
             {/* Review Text details */}
             <div className="space-y-4">
               <div>
-                <label className="block text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-1.5">
+                <label className="block text-[10px] font-black uppercase tracking-widest text-slate-300 dark:text-slate-200 font-sans mb-1.5">
                   {t('label_review_title')}
                 </label>
                 <input
@@ -606,11 +606,11 @@ export const SettingsPanel: React.FC<SettingsPanelProps> = ({
               </div>
 
               <div>
-                <label className="flex items-center justify-between text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-1.5">
+                <label className="flex items-center justify-between text-[10px] font-black uppercase tracking-widest text-slate-300 dark:text-slate-200 font-sans mb-1.5">
                   {t('label_review_text')}
                   <button
                     onClick={onCopyText}
-                    className="flex items-center gap-1 text-[10px] text-emerald-600 dark:text-emerald-400 hover:underline capitalize cursor-pointer"
+                    className="flex items-center gap-1 text-[10px] text-emerald-600 dark:text-emerald-400 hover:underline capitalize cursor-pointer font-sans"
                   >
                     <Copy size={10} />
                     {t('btn_copy_text')}
@@ -630,7 +630,7 @@ export const SettingsPanel: React.FC<SettingsPanelProps> = ({
 
               <div className="grid grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-1.5">
+                  <label className="block text-[10px] font-black uppercase tracking-widest text-slate-300 dark:text-slate-200 font-sans mb-1.5">
                     {t('label_date')}
                   </label>
                   <input
@@ -645,7 +645,7 @@ export const SettingsPanel: React.FC<SettingsPanelProps> = ({
                   />
                 </div>
                 <div>
-                  <label className="block text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-1.5">
+                  <label className="block text-[10px] font-black uppercase tracking-widest text-slate-300 dark:text-slate-200 font-sans mb-1.5">
                     {t('label_username')}
                   </label>
                   <input
@@ -663,15 +663,15 @@ export const SettingsPanel: React.FC<SettingsPanelProps> = ({
             </div>
 
             {/* AVATAR AND BRAND IMAGES BOXES */}
-            <div className="border-t border-slate-100 dark:border-slate-800/80 pt-5 space-y-4">
-              <h4 className="text-xs font-extrabold uppercase tracking-widest text-slate-400">
+            <div className="border-t border-slate-100 dark:border-slate-800/80 pt-5 space-y-4 font-sans">
+              <h4 className="text-[11px] font-black uppercase tracking-widest bg-gradient-to-r from-emerald-400 via-emerald-300 to-teal-400 bg-clip-text text-transparent">
                 Media & Verification Assets
               </h4>
 
               {/* Avatar settings block */}
               <div className="bg-slate-50 dark:bg-slate-950/40 p-4 rounded-xl border border-slate-100 dark:border-slate-800/80 grid grid-cols-2 gap-4">
                 <div className="col-span-2 flex items-center justify-between">
-                  <span className="text-sm font-bold text-slate-800 dark:text-slate-200">
+                  <span className="text-sm font-bold text-slate-800 dark:text-slate-200 font-sans">
                     Display Client Photo
                   </span>
                   <label className="relative inline-flex items-center cursor-pointer">
@@ -690,7 +690,7 @@ export const SettingsPanel: React.FC<SettingsPanelProps> = ({
                 {reviewData.showAvatar && (
                   <>
                     <div className="col-span-2">
-                      <label className="block text-[11px] font-bold text-slate-500 dark:text-slate-400 mb-1.5">
+                      <label className="block text-[10px] font-black uppercase tracking-widest text-slate-300 dark:text-slate-200 mb-1.5 font-sans">
                         Avatar Frame Shape
                       </label>
                       <div className="grid grid-cols-3 gap-2">
@@ -713,7 +713,7 @@ export const SettingsPanel: React.FC<SettingsPanelProps> = ({
                     </div>
 
                     <div className="col-span-2">
-                      <label className="block text-[11px] font-bold text-slate-500 dark:text-slate-400 mb-1.5">
+                      <label className="block text-[10px] font-black uppercase tracking-widest text-slate-300 dark:text-slate-200 mb-1.5 font-sans">
                         Client Portrait Photo
                       </label>
                       <div
@@ -765,7 +765,7 @@ export const SettingsPanel: React.FC<SettingsPanelProps> = ({
               {/* Company Logo and QR verification */}
               <div className="grid grid-cols-1 gap-4 bg-slate-50 dark:bg-slate-950/40 p-4 rounded-xl border border-slate-100 dark:border-slate-800/80">
                 <div>
-                  <label className="block text-[11px] font-bold text-slate-500 dark:text-slate-400 mb-1.5">
+                  <label className="block text-[10px] font-black uppercase tracking-widest text-slate-300 dark:text-slate-200 mb-1.5 font-sans">
                     Client's Company Logo (Optional)
                   </label>
                   <div
@@ -818,251 +818,6 @@ export const SettingsPanel: React.FC<SettingsPanelProps> = ({
                   </div>
                 </div>
 
-                <div className="pt-2 border-t border-slate-200/20">
-                  <div className="flex items-center justify-between mb-2">
-                    <div>
-                      <h5 className="text-xs font-bold text-slate-800 dark:text-slate-200">
-                        Interactive QR Code Verification
-                      </h5>
-                      <span className="text-[10px] text-slate-400 block">
-                        Embeds a verifiable offline validation link
-                      </span>
-                    </div>
-                    <label className="relative inline-flex items-center cursor-pointer">
-                      <input
-                        type="checkbox"
-                        checked={reviewData.useQrCode}
-                        onChange={(e) =>
-                          setReviewData((prev) => ({ ...prev, useQrCode: e.target.checked }))
-                        }
-                        className="sr-only peer"
-                      />
-                      <div className="w-9 h-5 bg-slate-200 peer-focus:outline-none rounded-full peer dark:bg-slate-800 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-4 after:width-4 after:transition-all dark:border-slate-600 peer-checked:bg-emerald-500"></div>
-                    </label>
-                  </div>
-
-                  {reviewData.useQrCode && (
-                    <div className="mt-3 space-y-3">
-                      <div>
-                        <label className="block text-[10px] font-extrabold uppercase tracking-widest text-slate-400 mb-1">
-                          Verification Website / URL
-                        </label>
-                        <input
-                          type="url"
-                          value={reviewData.qrCodeUrl}
-                          onChange={(e) =>
-                            setReviewData((prev) => ({ ...prev, qrCodeUrl: e.target.value }))
-                          }
-                          placeholder="https://upwork.com/contracts/12345678"
-                          className="w-full px-3 py-1.5 text-xs border border-slate-200 dark:border-slate-800 rounded-lg bg-white dark:bg-slate-900 focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 text-slate-800 dark:text-slate-200 font-medium"
-                        />
-                      </div>
-                      
-                      {/* QR Color Selector */}
-                      <div>
-                        <label className="block text-[10px] font-extrabold uppercase tracking-widest text-slate-400 mb-1.5">
-                          QR Code Color Mode
-                        </label>
-                        <div className="grid grid-cols-4 gap-1.5">
-                          {([
-                            { id: 'default', label: 'Default' },
-                            { id: 'primary', label: 'Primary' },
-                            { id: 'accent', label: 'Accent' },
-                            { id: 'custom', label: 'Custom' }
-                          ] as const).map((mode) => (
-                            <button
-                              key={mode.id}
-                              type="button"
-                              onClick={() =>
-                                setDesignConfig((prev) => ({
-                                  ...prev,
-                                  qrColorMode: mode.id,
-                                }))
-                              }
-                              className={`px-1 py-1.5 text-[10px] font-extrabold uppercase rounded-md border text-center transition-all cursor-pointer ${
-                                (designConfig.qrColorMode || 'default') === mode.id
-                                  ? 'border-emerald-500 text-emerald-600 dark:text-emerald-400 bg-emerald-50/20 dark:bg-emerald-950/20'
-                                  : 'border-slate-200 dark:border-slate-800 text-slate-500 hover:border-slate-300 dark:text-slate-400 bg-white dark:bg-slate-900'
-                              }`}
-                            >
-                              {mode.label}
-                            </button>
-                          ))}
-                        </div>
-                      </div>
-
-                      {/* Custom QR Color Picker */}
-                      {(designConfig.qrColorMode === 'custom') && (
-                        <div className="animate-fadeIn">
-                          <label className="block text-[10px] font-extrabold uppercase tracking-widest text-slate-400 mb-1">
-                            Custom QR Code Color
-                          </label>
-                          <div className="flex items-center gap-1.5 bg-white dark:bg-slate-900 p-1.5 rounded-lg border border-slate-200 dark:border-slate-800">
-                            <input
-                              type="color"
-                              value={designConfig.qrCustomColor || '#14A800'}
-                              onChange={(e) =>
-                                setDesignConfig((p) => ({ ...p, qrCustomColor: e.target.value }))
-                              }
-                              className="w-7 h-7 rounded cursor-pointer bg-transparent border-0"
-                            />
-                            <input
-                              type="text"
-                              value={designConfig.qrCustomColor || '#14A800'}
-                              onChange={(e) =>
-                                setDesignConfig((p) => ({ ...p, qrCustomColor: e.target.value }))
-                              }
-                              className="w-full font-mono text-xs uppercase bg-transparent border-0 text-slate-700 dark:text-slate-300 focus:outline-none"
-                            />
-                          </div>
-                        </div>
-                      )}
-
-                      {/* QR Advanced Styling & Configuration Sub-Section */}
-                      <div className="pt-3.5 border-t border-slate-100 dark:border-slate-800/60 space-y-3.5 animate-fadeIn">
-                        <div className="flex items-center justify-between">
-                          <h4 className="text-[10px] font-extrabold uppercase tracking-widest text-slate-400">
-                            QR Code Styling & Correction
-                          </h4>
-                        </div>
-
-                        {/* Error Correction Level */}
-                        <div>
-                          <label className="block text-[10px] font-extrabold uppercase tracking-widest text-slate-400 mb-1.5">
-                            Error Correction Level
-                          </label>
-                          <div className="grid grid-cols-4 gap-1.5">
-                            {([
-                              { id: 'L', label: 'Low (7%)', desc: 'Saves space' },
-                              { id: 'M', label: 'Med (15%)', desc: 'Standard' },
-                              { id: 'Q', label: 'Quart (25%)', desc: 'Resilient' },
-                              { id: 'H', label: 'High (30%)', desc: 'Maximum' }
-                            ] as const).map((level) => (
-                              <button
-                                key={level.id}
-                                type="button"
-                                title={level.desc}
-                                onClick={() =>
-                                  setDesignConfig((prev) => ({
-                                    ...prev,
-                                    qrErrorCorrectionLevel: level.id,
-                                  }))
-                                }
-                                className={`px-1 py-1.5 text-[10px] font-extrabold uppercase rounded-md border text-center transition-all cursor-pointer ${
-                                  (designConfig.qrErrorCorrectionLevel || 'M') === level.id
-                                    ? 'border-emerald-500 text-emerald-600 dark:text-emerald-400 bg-emerald-50/20 dark:bg-emerald-950/20'
-                                    : 'border-slate-200 dark:border-slate-800 text-slate-500 hover:border-slate-300 dark:text-slate-400 bg-white dark:bg-slate-900'
-                                }`}
-                              >
-                                {level.id}
-                              </button>
-                            ))}
-                          </div>
-                        </div>
-
-                        {/* Border Radius Toggle & Slider */}
-                        <div className="space-y-2 bg-slate-50 dark:bg-slate-950/20 p-2.5 rounded-lg border border-slate-100 dark:border-slate-800/40">
-                          <div className="flex items-center justify-between">
-                            <div>
-                              <span className="text-[11px] font-bold text-slate-700 dark:text-slate-300">
-                                Rounded Corners
-                              </span>
-                              <span className="text-[9px] text-slate-400 block">
-                                Round the edges of the QR backdrop
-                              </span>
-                            </div>
-                            <label className="relative inline-flex items-center cursor-pointer">
-                              <input
-                                type="checkbox"
-                                checked={designConfig.qrShowBorderRadius !== false}
-                                onChange={(e) =>
-                                  setDesignConfig((prev) => ({
-                                    ...prev,
-                                    qrShowBorderRadius: e.target.checked,
-                                  }))
-                                }
-                                className="sr-only peer"
-                              />
-                              <div className="w-8 h-4 bg-slate-200 peer-focus:outline-none rounded-full peer dark:bg-slate-800 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-3 after:width-3 after:transition-all dark:border-slate-600 peer-checked:bg-emerald-500"></div>
-                            </label>
-                          </div>
-
-                          {(designConfig.qrShowBorderRadius !== false) && (
-                            <div className="pt-1.5 animate-fadeIn">
-                              <div className="flex items-center justify-between text-[10px] font-bold text-slate-500 mb-1">
-                                <span>Corner Radius</span>
-                                <span className="font-mono">{designConfig.qrBorderRadius ?? 12}px</span>
-                              </div>
-                              <input
-                                type="range"
-                                min="0"
-                                max="24"
-                                value={designConfig.qrBorderRadius ?? 12}
-                                onChange={(e) =>
-                                  setDesignConfig((prev) => ({
-                                    ...prev,
-                                    qrBorderRadius: parseInt(e.target.value),
-                                  }))
-                                }
-                                className="w-full accent-emerald-500 h-1 bg-slate-200 dark:bg-slate-800 rounded-lg appearance-none cursor-pointer"
-                              />
-                            </div>
-                          )}
-                        </div>
-
-                        {/* Padding Toggle & Slider */}
-                        <div className="space-y-2 bg-slate-50 dark:bg-slate-950/20 p-2.5 rounded-lg border border-slate-100 dark:border-slate-800/40">
-                          <div className="flex items-center justify-between">
-                            <div>
-                              <span className="text-[11px] font-bold text-slate-700 dark:text-slate-300">
-                                Inner Padding
-                              </span>
-                              <span className="text-[9px] text-slate-400 block">
-                                Adjust spacing around the QR code
-                              </span>
-                            </div>
-                            <label className="relative inline-flex items-center cursor-pointer">
-                              <input
-                                type="checkbox"
-                                checked={designConfig.qrShowPadding !== false}
-                                onChange={(e) =>
-                                  setDesignConfig((prev) => ({
-                                    ...prev,
-                                    qrShowPadding: e.target.checked,
-                                  }))
-                                }
-                                className="sr-only peer"
-                              />
-                              <div className="w-8 h-4 bg-slate-200 peer-focus:outline-none rounded-full peer dark:bg-slate-800 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-3 after:width-3 after:transition-all dark:border-slate-600 peer-checked:bg-emerald-500"></div>
-                            </label>
-                          </div>
-
-                          {(designConfig.qrShowPadding !== false) && (
-                            <div className="pt-1.5 animate-fadeIn">
-                              <div className="flex items-center justify-between text-[10px] font-bold text-slate-500 mb-1">
-                                <span>Padding Space</span>
-                                <span className="font-mono">{designConfig.qrPadding ?? 8}px</span>
-                              </div>
-                              <input
-                                type="range"
-                                min="0"
-                                max="24"
-                                value={designConfig.qrPadding ?? 8}
-                                onChange={(e) =>
-                                  setDesignConfig((prev) => ({
-                                    ...prev,
-                                    qrPadding: parseInt(e.target.value),
-                                  }))
-                                }
-                                className="w-full accent-emerald-500 h-1 bg-slate-200 dark:bg-slate-800 rounded-lg appearance-none cursor-pointer"
-                              />
-                            </div>
-                          )}
-                        </div>
-                      </div>
-                    </div>
-                  )}
-                </div>
               </div>
             </div>
           </div>
@@ -1075,19 +830,19 @@ export const SettingsPanel: React.FC<SettingsPanelProps> = ({
             <div className="p-4 bg-slate-50 dark:bg-slate-950/40 rounded-2xl border border-slate-100 dark:border-slate-800/80 space-y-3">
               <div className="flex items-center gap-1.5">
                 <Sparkles className="text-emerald-500" size={16} />
-                <h4 className="text-sm font-bold text-slate-800 dark:text-slate-200">
+                <h4 className="text-xs font-black uppercase tracking-wider bg-gradient-to-r from-emerald-400 via-emerald-300 to-teal-400 bg-clip-text text-transparent font-sans">
                   AI Color Palette Generator
                 </h4>
               </div>
-              <p className="text-[11px] text-slate-500 leading-normal">
+              <p className="text-[11px] text-slate-500 leading-normal font-sans">
                 Instantly apply gorgeous, mathematically matched luxury, corporate, minimal, or cyber neon background/text gradients.
               </p>
-              <div className="grid grid-cols-5 gap-1.5">
+              <div className="grid grid-cols-5 gap-1.5 font-sans">
                 {(['luxury', 'tech', 'neon', 'fresh', 'minimal'] as const).map((mood) => (
                   <button
                     key={mood}
                     onClick={() => generatePalette(mood)}
-                    className="px-2 py-2 text-[10px] font-bold capitalize rounded-lg border border-slate-200 dark:border-slate-800 hover:border-emerald-500 hover:text-emerald-600 bg-white dark:bg-slate-900 transition-all text-slate-600 dark:text-slate-400 shadow-sm"
+                    className="px-2 py-2 text-[10px] font-bold capitalize rounded-lg border border-slate-200 dark:border-slate-800 hover:border-emerald-500 hover:text-emerald-600 bg-white dark:bg-slate-900 transition-all text-slate-600 dark:text-slate-400 shadow-sm font-sans"
                   >
                     {mood}
                   </button>
@@ -1097,7 +852,7 @@ export const SettingsPanel: React.FC<SettingsPanelProps> = ({
 
             {/* Typography selection */}
             <div>
-              <label className="block text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-2">
+              <label className="block text-[10px] font-black uppercase tracking-widest text-slate-300 dark:text-slate-200 font-sans mb-2">
                 Font Family
               </label>
               <div className="grid grid-cols-3 gap-2">
@@ -1131,7 +886,7 @@ export const SettingsPanel: React.FC<SettingsPanelProps> = ({
 
             {/* Design theme selector */}
             <div>
-              <label className="block text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-2">
+              <label className="block text-[10px] font-black uppercase tracking-widest text-slate-300 dark:text-slate-200 font-sans mb-2">
                 Visual Theme Presets
               </label>
               <div className="grid grid-cols-3 gap-2">
@@ -1168,7 +923,7 @@ export const SettingsPanel: React.FC<SettingsPanelProps> = ({
 
             {/* Quote Styles */}
             <div>
-              <label className="block text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-2">
+              <label className="block text-[10px] font-black uppercase tracking-widest text-slate-300 dark:text-slate-200 font-sans mb-2">
                 Quote Styling
               </label>
               <div className="grid grid-cols-3 gap-2">
@@ -1195,7 +950,7 @@ export const SettingsPanel: React.FC<SettingsPanelProps> = ({
 
             {/* Card Frame Styles */}
             <div>
-              <label className="block text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-2">
+              <label className="block text-[10px] font-black uppercase tracking-widest text-slate-300 dark:text-slate-200 font-sans mb-2">
                 Card Frame Styles
               </label>
               <div className="grid grid-cols-3 gap-2">
@@ -1222,7 +977,7 @@ export const SettingsPanel: React.FC<SettingsPanelProps> = ({
 
             {/* Stage Background options */}
             <div>
-              <label className="block text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-2">
+              <label className="block text-[10px] font-black uppercase tracking-widest text-slate-300 dark:text-slate-200 font-sans mb-2">
                 Stage Background Styles
               </label>
               <div className="grid grid-cols-2 gap-2">
@@ -1259,7 +1014,7 @@ export const SettingsPanel: React.FC<SettingsPanelProps> = ({
             {/* Custom Palette Overrides */}
             <div className="pt-3 border-t border-slate-100 dark:border-slate-800/80 grid grid-cols-2 gap-3.5">
               <div>
-                <label className="block text-[10px] font-extrabold uppercase tracking-widest text-slate-400 mb-1">
+                <label className="block text-[10px] font-black uppercase tracking-widest text-slate-300 dark:text-slate-200 mb-1 font-sans">
                   Accent Color
                 </label>
                 <div className="flex items-center gap-1.5 bg-slate-50 dark:bg-slate-950 p-2 rounded-lg border border-slate-200 dark:border-slate-800">
@@ -1283,7 +1038,7 @@ export const SettingsPanel: React.FC<SettingsPanelProps> = ({
               </div>
 
               <div>
-                <label className="block text-[10px] font-extrabold uppercase tracking-widest text-slate-400 mb-1">
+                <label className="block text-[10px] font-black uppercase tracking-widest text-slate-300 dark:text-slate-200 mb-1 font-sans">
                   Card Primary Accent
                 </label>
                 <div className="flex items-center gap-1.5 bg-slate-50 dark:bg-slate-950 p-2 rounded-lg border border-slate-200 dark:border-slate-800">
@@ -1308,9 +1063,9 @@ export const SettingsPanel: React.FC<SettingsPanelProps> = ({
             </div>
 
             {/* CSS Filters Section */}
-            <div className="pt-4 border-t border-slate-100 dark:border-slate-800/80 space-y-4">
+            <div className="pt-4 border-t border-slate-100 dark:border-slate-800/80 space-y-4 font-sans">
               <div className="flex items-center justify-between">
-                <h4 className="text-xs font-extrabold uppercase tracking-widest text-slate-400">
+                <h4 className="text-xs font-black uppercase tracking-widest bg-gradient-to-r from-emerald-400 via-emerald-300 to-teal-400 bg-clip-text text-transparent">
                   {t('header_filters')}
                 </h4>
                 <button
@@ -1430,7 +1185,7 @@ export const SettingsPanel: React.FC<SettingsPanelProps> = ({
           <div className="space-y-5 animate-fadeIn">
             {/* Resolution Selector */}
             <div>
-              <label className="block text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-1.5">
+              <label className="block text-[10px] font-black uppercase tracking-widest text-slate-300 dark:text-slate-200 font-sans mb-1.5">
                 Target Export Aspect Ratio / Size
               </label>
               <select
@@ -1454,7 +1209,7 @@ export const SettingsPanel: React.FC<SettingsPanelProps> = ({
 
             {/* Scale Multiplier */}
             <div>
-              <label className="block text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-1.5">
+              <label className="block text-[10px] font-black uppercase tracking-widest text-slate-300 dark:text-slate-200 font-sans mb-1.5">
                 Export Quality Multiplier (Antialiasing)
               </label>
               <div className="grid grid-cols-4 gap-2">
@@ -1542,10 +1297,240 @@ export const SettingsPanel: React.FC<SettingsPanelProps> = ({
               )}
             </div>
 
+            {/* QR Code Configuration Sub-Section */}
+            <div className="p-3.5 bg-slate-50 dark:bg-slate-950/40 border border-slate-100 dark:border-slate-800/80 rounded-xl space-y-3.5 font-sans">
+              <div className="flex items-center justify-between">
+                <div>
+                  <h5 className="text-sm font-bold text-slate-800 dark:text-slate-200">
+                    Interactive QR Code Verification
+                  </h5>
+                  <span className="text-[10px] text-slate-400 block">
+                    Embeds a verifiable offline validation link
+                  </span>
+                </div>
+                <label className="relative inline-flex items-center cursor-pointer">
+                  <input
+                    type="checkbox"
+                    checked={reviewData.useQrCode}
+                    onChange={(e) =>
+                      setReviewData((prev) => ({ ...prev, useQrCode: e.target.checked }))
+                    }
+                    className="sr-only peer"
+                  />
+                  <div className="w-11 h-6 bg-slate-200 peer-focus:outline-none rounded-full peer dark:bg-slate-800 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-5 after:width-5 after:transition-all dark:border-slate-600 peer-checked:bg-emerald-500"></div>
+                </label>
+              </div>
+
+              {reviewData.useQrCode && (
+                <div className="space-y-3.5 pt-3.5 border-t border-slate-100 dark:border-slate-800/60 animate-fadeIn">
+                  {/* Verification URL Input */}
+                  <div>
+                    <label className="block text-[10px] font-black uppercase tracking-widest text-slate-300 dark:text-slate-200 mb-1.5">
+                      Verification Website / URL
+                    </label>
+                    <input
+                      type="url"
+                      value={reviewData.qrCodeUrl}
+                      onChange={(e) =>
+                        setReviewData((prev) => ({ ...prev, qrCodeUrl: e.target.value }))
+                      }
+                      placeholder="https://upwork.com/contracts/12345678"
+                      className="w-full px-3 py-1.5 text-xs border border-slate-200 dark:border-slate-800 rounded-lg bg-white dark:bg-slate-900 focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 text-slate-800 dark:text-slate-200 font-medium"
+                    />
+                  </div>
+
+                  {/* QR Color Picker / Mode Selector */}
+                  <div>
+                    <label className="block text-[10px] font-black uppercase tracking-widest text-slate-300 dark:text-slate-200 mb-1.5">
+                      QR Code Color Mode
+                    </label>
+                    <div className="grid grid-cols-4 gap-1.5 mb-2">
+                      {([
+                        { id: 'default', label: 'Default' },
+                        { id: 'primary', label: 'Primary' },
+                        { id: 'accent', label: 'Accent' },
+                        { id: 'custom', label: 'Custom' }
+                      ] as const).map((mode) => (
+                        <button
+                          key={mode.id}
+                          type="button"
+                          onClick={() =>
+                            setDesignConfig((prev) => ({
+                              ...prev,
+                              qrColorMode: mode.id,
+                            }))
+                          }
+                          className={`px-1 py-1.5 text-[10px] font-extrabold uppercase rounded-md border text-center transition-all cursor-pointer ${
+                            (designConfig.qrColorMode || 'default') === mode.id
+                              ? 'border-emerald-500 text-emerald-600 dark:text-emerald-400 bg-emerald-50/20 dark:bg-emerald-950/20'
+                              : 'border-slate-200 dark:border-slate-800 text-slate-500 hover:border-slate-300 dark:text-slate-400 bg-white dark:bg-slate-900'
+                          }`}
+                        >
+                          {mode.label}
+                        </button>
+                      ))}
+                    </div>
+
+                    {(designConfig.qrColorMode === 'custom') && (
+                      <div className="flex items-center gap-1.5 bg-white dark:bg-slate-900 p-1.5 rounded-lg border border-slate-200 dark:border-slate-800 animate-fadeIn">
+                        <input
+                          type="color"
+                          value={designConfig.qrCustomColor || '#14A800'}
+                          onChange={(e) =>
+                            setDesignConfig((p) => ({ ...p, qrCustomColor: e.target.value }))
+                          }
+                          className="w-7 h-7 rounded cursor-pointer bg-transparent border-0"
+                        />
+                        <input
+                          type="text"
+                          value={designConfig.qrCustomColor || '#14A800'}
+                          onChange={(e) =>
+                            setDesignConfig((p) => ({ ...p, qrCustomColor: e.target.value }))
+                          }
+                          className="w-full font-mono text-xs uppercase bg-transparent border-0 text-slate-700 dark:text-slate-300 focus:outline-none"
+                        />
+                      </div>
+                    )}
+                  </div>
+
+                  {/* Error Correction Level */}
+                  <div>
+                    <label className="block text-[10px] font-black uppercase tracking-widest text-slate-300 dark:text-slate-200 mb-1.5">
+                      Error Correction Level
+                    </label>
+                    <div className="grid grid-cols-4 gap-1.5">
+                      {([
+                        { id: 'L', label: 'Low (7%)', desc: 'Saves space' },
+                        { id: 'M', label: 'Med (15%)', desc: 'Standard' },
+                        { id: 'Q', label: 'Quart (25%)', desc: 'Resilient' },
+                        { id: 'H', label: 'High (30%)', desc: 'Maximum' }
+                      ] as const).map((level) => (
+                        <button
+                          key={level.id}
+                          type="button"
+                          title={level.desc}
+                          onClick={() =>
+                            setDesignConfig((prev) => ({
+                              ...prev,
+                              qrErrorCorrectionLevel: level.id,
+                            }))
+                          }
+                          className={`px-1 py-1.5 text-[10px] font-extrabold uppercase rounded-md border text-center transition-all cursor-pointer ${
+                            (designConfig.qrErrorCorrectionLevel || 'M') === level.id
+                              ? 'border-emerald-500 text-emerald-600 dark:text-emerald-400 bg-emerald-50/20 dark:bg-emerald-950/20'
+                              : 'border-slate-200 dark:border-slate-800 text-slate-500 hover:border-slate-300 dark:text-slate-400 bg-white dark:bg-slate-900'
+                          }`}
+                        >
+                          {level.id}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Corner Radius & Padding controls */}
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3 pt-2">
+                    {/* Border Radius Toggle & Slider */}
+                    <div className="space-y-2 bg-slate-50 dark:bg-slate-950/20 p-2.5 rounded-lg border border-slate-100 dark:border-slate-800/40">
+                      <div className="flex items-center justify-between">
+                        <div>
+                          <span className="text-[11px] font-bold text-slate-700 dark:text-slate-300 font-sans">
+                            Rounded Corners
+                          </span>
+                        </div>
+                        <label className="relative inline-flex items-center cursor-pointer">
+                          <input
+                            type="checkbox"
+                            checked={designConfig.qrShowBorderRadius !== false}
+                            onChange={(e) =>
+                              setDesignConfig((prev) => ({
+                                ...prev,
+                                qrShowBorderRadius: e.target.checked,
+                              }))
+                            }
+                            className="sr-only peer"
+                          />
+                          <div className="w-8 h-4 bg-slate-200 peer-focus:outline-none rounded-full peer dark:bg-slate-800 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-3 after:width-3 after:transition-all dark:border-slate-600 peer-checked:bg-emerald-500"></div>
+                        </label>
+                      </div>
+
+                      {(designConfig.qrShowBorderRadius !== false) && (
+                        <div className="pt-1 animate-fadeIn">
+                          <div className="flex items-center justify-between text-[9px] font-bold text-slate-500 mb-1">
+                            <span>Radius</span>
+                            <span className="font-mono text-[9px]">{designConfig.qrBorderRadius ?? 12}px</span>
+                          </div>
+                          <input
+                            type="range"
+                            min="0"
+                            max="24"
+                            value={designConfig.qrBorderRadius ?? 12}
+                            onChange={(e) =>
+                              setDesignConfig((prev) => ({
+                                ...prev,
+                                qrBorderRadius: parseInt(e.target.value),
+                              }))
+                            }
+                            className="w-full accent-emerald-500 h-1 bg-slate-200 dark:bg-slate-800 rounded-lg appearance-none cursor-pointer"
+                          />
+                        </div>
+                      )}
+                    </div>
+
+                    {/* Padding Toggle & Slider */}
+                    <div className="space-y-2 bg-slate-50 dark:bg-slate-950/20 p-2.5 rounded-lg border border-slate-100 dark:border-slate-800/40">
+                      <div className="flex items-center justify-between">
+                        <div>
+                          <span className="text-[11px] font-bold text-slate-700 dark:text-slate-300 font-sans">
+                            Inner Padding
+                          </span>
+                        </div>
+                        <label className="relative inline-flex items-center cursor-pointer">
+                          <input
+                            type="checkbox"
+                            checked={designConfig.qrShowPadding !== false}
+                            onChange={(e) =>
+                              setDesignConfig((prev) => ({
+                                ...prev,
+                                qrShowPadding: e.target.checked,
+                              }))
+                            }
+                            className="sr-only peer"
+                          />
+                          <div className="w-8 h-4 bg-slate-200 peer-focus:outline-none rounded-full peer dark:bg-slate-800 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-3 after:width-3 after:transition-all dark:border-slate-600 peer-checked:bg-emerald-500"></div>
+                        </label>
+                      </div>
+
+                      {(designConfig.qrShowPadding !== false) && (
+                        <div className="pt-1 animate-fadeIn">
+                          <div className="flex items-center justify-between text-[9px] font-bold text-slate-500 mb-1">
+                            <span>Padding</span>
+                            <span className="font-mono text-[9px]">{designConfig.qrPadding ?? 8}px</span>
+                          </div>
+                          <input
+                            type="range"
+                            min="0"
+                            max="24"
+                            value={designConfig.qrPadding ?? 8}
+                            onChange={(e) =>
+                              setDesignConfig((prev) => ({
+                                ...prev,
+                                qrPadding: parseInt(e.target.value),
+                              }))
+                            }
+                            className="w-full accent-emerald-500 h-1 bg-slate-200 dark:bg-slate-800 rounded-lg appearance-none cursor-pointer"
+                          />
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
+
             {/* Custom CSS Panel */}
             <div>
               <div className="flex items-center justify-between mb-1.5">
-                <label className="block text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">
+                <label className="block text-[10px] font-black uppercase tracking-widest text-slate-300 dark:text-slate-200 font-sans">
                   Custom Developer CSS Override
                 </label>
                 <HelpCircle size={12} className="text-slate-400 cursor-help" title="Enter custom CSS classes to override card typography or background. Use class selectors like .review-card or .quote-symbol" />
@@ -1589,8 +1574,8 @@ export const SettingsPanel: React.FC<SettingsPanelProps> = ({
               </div>
             </div>
 
-            <div className="space-y-3">
-              <h4 className="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">
+            <div className="space-y-3 font-sans">
+              <h4 className="text-xs font-black uppercase tracking-widest bg-gradient-to-r from-emerald-400 via-emerald-300 to-teal-400 bg-clip-text text-transparent">
                 My Saved Presets ({savedTemplates.length})
               </h4>
 
@@ -1651,7 +1636,7 @@ export const SettingsPanel: React.FC<SettingsPanelProps> = ({
             </div>
 
             <div>
-              <label className="block text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-1.5">
+              <label className="block text-[10px] font-black uppercase tracking-widest text-slate-300 dark:text-slate-200 font-sans mb-1.5">
                 Pasted JSON Array Structure
               </label>
               <textarea
