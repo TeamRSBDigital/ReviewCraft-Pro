@@ -1,0 +1,6 @@
+{
+  "name": "ReviewCraft Pro",
+  "description": "A premium, professional-grade client review card generator to design, preview, and export high-resolution review assets.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
